@@ -1,0 +1,1 @@
+$(".iconn").on("click",function(){$(".adv .advCon").css("display","none")});

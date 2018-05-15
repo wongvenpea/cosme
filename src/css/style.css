@@ -1,0 +1,54 @@
+/*
+Error: Invalid CSS after "...l","sans-serif"": expected expression (e.g. 1px, bold), was ";"
+        on line 3 of ./src/scss/style.css
+
+1: 
+2: #panda-show {
+3: 	font: 12px/1.5 "STHeiti","Microsoft YaHei","Helvetica Neue","Helvetica","SimSun","STSong","Arial","sans-serif";
+4: 	/*background: url(../images/bg.jpg) no-repeat center top;*\/
+5: 	background-size: 100% auto;
+6: }
+7: 
+8: #panda-show .shuffer-title {
+
+Backtrace:
+./src/scss/style.css:3
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/scss/parser.rb:1278:in `expected'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/script/lexer.rb:231:in `expected!'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/script/parser.rb:762:in `assert_done'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/script/parser.rb:69:in `parse'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/script/parser.rb:228:in `parse'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/script.rb:27:in `parse'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:1177:in `parse_script'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:749:in `parse_property'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:708:in `parse_property_or_rule'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:667:in `parse_line'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:540:in `build_tree'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:559:in `block in append_children'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:558:in `each'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:558:in `append_children'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:549:in `block in build_tree'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:542:in `each'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:542:in `build_tree'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:559:in `block in append_children'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:558:in `each'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:558:in `append_children'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:417:in `_to_tree'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:290:in `render'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:464:in `update_stylesheet'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `each'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin.rb:82:in `update_stylesheets'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:51:in `process_result'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/base.rb:52:in `parse'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/base.rb:19:in `parse!'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/bin/sass:13:in `<top (required)>'
+d:/Ruby23-x64/bin/sass:22:in `load'
+d:/Ruby23-x64/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...l\",\"sans-serif\"\": expected expression (e.g. 1px, bold), was \";\"\A         on line 3 of ./src/scss/style.css\A \A 1: \A 2: #panda-show {\A 3: 	font: 12px/1.5 \"STHeiti\",\"Microsoft YaHei\",\"Helvetica Neue\",\"Helvetica\",\"SimSun\",\"STSong\",\"Arial\",\"sans-serif\";\A 4: 	/*background: url(../images/bg.jpg) no-repeat center top;*/\A 5: 	background-size: 100% auto;\A 6: }\A 7: \A 8: #panda-show .shuffer-title {"; }

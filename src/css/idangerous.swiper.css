@@ -1,0 +1,43 @@
+/*
+Error: Invalid mixin "===============================================================*\/".
+        on line 17 of ./src/scss/idangerous.swiper.css
+
+12:  *
+13:  * Released on: February 11, 2015
+14: *\/
+15: /* ===============================================================
+16: Basic Swiper Styles 
+17: ================================================================*\/
+18: .swiper-container {
+19: 	margin:0 auto;
+20: 	position:relative;
+21: 	overflow:hidden;
+22: 	direction:ltr;
+
+Backtrace:
+./src/scss/idangerous.swiper.css:17
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:1127:in `parse_mixin_definition'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:659:in `parse_line'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:540:in `build_tree'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:559:in `block in append_children'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:558:in `each'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:558:in `append_children'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:417:in `_to_tree'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:290:in `render'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:464:in `update_stylesheet'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `each'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin.rb:82:in `update_stylesheets'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/sass_scss.rb:51:in `process_result'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/base.rb:52:in `parse'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/exec/base.rb:19:in `parse!'
+d:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.5.6/bin/sass:13:in `<top (required)>'
+d:/Ruby23-x64/bin/sass:22:in `load'
+d:/Ruby23-x64/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid mixin \"===============================================================*/\".\A         on line 17 of ./src/scss/idangerous.swiper.css\A \A 12:  *\A 13:  * Released on: February 11, 2015\A 14: */\A 15: /* ===============================================================\A 16: Basic Swiper Styles \A 17: ================================================================*/\A 18: .swiper-container {\A 19: 	margin:0 auto;\A 20: 	position:relative;\A 21: 	overflow:hidden;\A 22: 	direction:ltr;"; }
