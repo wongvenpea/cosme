@@ -1,0 +1,133 @@
+
+.cart{
+
+  img{
+	width: 160px;
+	height: 120px;
+	margin-top:10px;
+}
+
+
+/*span{display: inline-block;}*/
+
+.imfor_top div {
+	height: 40px;
+	background-color: #ccc;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+
+.imfor div {
+	height: 140px;
+	line-height: 120px;
+}
+
+.imfor:hover {
+	background: RGB(238, 246, 255);
+}
+
+.check,
+.check_top {
+	width: 70px;
+}
+
+.pudc,
+.pudc_top {
+	width: 49%;
+}
+
+.pices,
+.pices_top {
+	width: 60px;
+}
+
+.totle {
+	color: red;
+}
+
+.num,
+.num_top {
+	width: 90px;
+}
+
+.num input {
+	text-align: center;
+	height: 40px;
+	width: 40px;
+}
+
+.num span {
+	height: 23px;
+	width: 17px;
+	border: 1px solid #e5e5e5;
+	background: #f0f0f0;
+	text-align: center;
+	line-height: 23px;
+	color: #444;
+	cursor: pointer;
+}
+
+.totle,
+.totle_top {
+	width: 60px;
+}
+
+.del,
+.del_top {
+	width: 60px;
+	cursor: pointer;
+}
+
+.imfor_top div,
+.imfor div {
+	float: left;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+.imfor_top,
+.imfor {
+	width: 100%;
+	
+	overflow: hidden;
+}
+
+.foot {
+	float: inherit;
+	overflow: hidden;
+	padding:10px 0;
+}
+
+#box,
+#content_box {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.foot_add,
+.foot_del {
+	float: left;
+	cursor: pointer;
+	margin-left: 10px;
+	margin-top: 14px;
+}
+
+.foot {
+	width: 100%;
+	background-color: #eaeaea;
+}
+
+.foot_tol,
+.foot_cash {
+	float: right;
+	cursor: pointer;
+	width: 80px;
+	margin-top: 14px;
+	margin-left: 100px;
+}
+
+#susum {
+	color: red;
+}
+}

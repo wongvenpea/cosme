@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>购物车详情页</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<script src="../js/jquery-1.10.1.min.js"></script>
+<link rel="stylesheet" href="../css/carts.css">
+<link rel="stylesheet" href="../plugins/layui/css/layui.css">
+<link rel="stylesheet" href="../plugins/awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="../plugins/eleme-ui/index.css">
+<!-- <link rel="stylesheet" href="../css/CivilMilitaryIntegration/public.css" /> -->
+<link rel="stylesheet" href="../css/CivilMilitaryIntegration/ShoppingCartAdress.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/indent.css">
+</head>
+<body>
+	
+<!-- adv -->
+<!-- adv -->
+<div class="adv">
+	<div class="advCon">
+		<a href="" class="fa"><p>母亲节快乐，献给最爱的妈妈！</p></a>
+		<button type="button" class="close closes" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	</div>
+</div>
+<!-- <div class="icons">✔</div> -->
+<!-- adress -->
+<div class="adr">
+	<div class="adrCon">
+		<div class="adrLeft">
+			<select name="" id="">
+				<option value="">中国</option>
+				<option value="">美国</option>
+				<option value="">俄罗斯</option>
+			</select> 
+			<div class="adrSer"></div>
+			<select name="" id="">
+				<option value="">简体中文</option>
+				<option value="">Englishi</option>
+				
+			</select>
+		</div>	
+		<div class="adrRight">
+			<button class="centerse">登录</button> | 
+			<a href="">首次购物即减usd 10</a> |
+			<a href="">我的回馈优惠</a> |
+			<a href="">订单追踪</a> |
+			<a href="">帮助</a>
+		</div>
+	</div>
+</div>
+<!-- logo -->
+<div class="logo">
+	<div class="logoCon">
+		<a href="javascript:;"><img src="../img/img1/logo.png" alt=""></a>
+		<div class="logoRight">
+			<div class="shoplist">
+				<div class="shoplist1"><img src="../img/img1/tu3.png" alt="">
+					我的购物车 <span>0件商品</span></div>
+				</div>
+				<p class="f1">USD 0.00</p>
+				<p class="f2">欢迎以美元或人民币结算</p>
+			</div>
+
+		</div>
+	</div>
+
+<!-- nav -->
+<div class="nav">
+	<a href="javascript:;">脸部保养</a>
+	<a href="javascript:;">脸部保养</a>
+	<a href="javascript:;">脸部保养</a>
+	<a href="javascript:;">脸部保养</a>
+	<a href="javascript:;">脸部保养</a>
+	<a href="javascript:;">脸部保养</a>
+	<a href="javascript:;">脸部保养</a>
+	<a href="javascript:;">脸部保养</a>
+	<a href="javascript:;">脸部保养</a>
+	<a href="javascript:;" class="active">脸部保养</a>
+	<a href="javascript:;">脸部保养</a>
+</div>
+<!-- search -->
+<div class="search">
+	<div class="seaForm">
+		<form action="">
+			<input type="text" name="" id="search" class="txt" placeholder="请输入关键字或商品编号">
+			<select name="" id="">
+				<option value="">所有品牌</option>
+				<option value="">古驰</option><option value="">lv</option>
+			</select>
+			<input type="submit" name="">
+			<a href="">品牌一览表</a> |
+			<a href="">优惠套装</a>
+		</form>
+	</div>	
+	<div class="seaA">热门搜索：
+		<a href="">雅诗兰黛</a>
+		<a href="">面膜</a>
+		<a href="">面膜</a>
+		<a href="">面膜</a>
+		<a href="">面膜</a>
+		<a href="">面膜</a>
+		<a href="">面膜</a>
+		<a href="">面膜</a>
+		<a href="">面膜</a>
+		<a href="">面膜</a>
+		<a href="">面膜</a>
+		<a href="">面膜</a>
+		<a href="">面膜</a>
+	</div>
+</div>
+
+<div class="indents">
+	<div class="row" id="myVue" v-cloak>
+	<div class="col-lg-10 col-lg-offset-1"><br>
+		<div class="contenter">
+			<ul>
+				<li>
+					<el-row>
+						<span class="addAddressCons">收货人信息</span>
+						<span class="addAddress" @click="AddressShowClick">新增收货地址</span>
+					</el-row>
+					<div class="scolleShow">
+					<el-row class="consignee" v-for="(items,index) in filterAddress">
+						<div v-on:mouseout="MouseOutList(items)" v-on:mouseleave="MouseOverList(items)">
+							<el-col :span="4">
+								<div class="consigneeList consigneeListWidth" :class="{'consigneeListClick':items.addressDefult}" @click="currentIndexClick(items,index)">
+									<span v-text="items.name"></span>
+									<span v-text="items.city"></span>
+									<div v-show="items.addressDefult">
+										<div class="arrow-right"></div>
+										<i class="fa fa-check" aria-hidden="true"></i>
+									</div>
+								</div>
+							</el-col>
+							<el-col class="rightAddress" :span="20" :class="{BackColor:items.addressIsShow}">
+								<span v-text="items.name"></span>
+								<span v-text="items.city"></span>
+								<span v-text="items.area"></span>
+								<span v-text="items.minarea"></span>
+								<span v-text="items.phone"></span>
+								<span v-if="items.isShowDefult" class="addressDefultClass">默认地址</span>
+								<span v-if="items.addressIsShow" class="edmitAddre">
+									<span class="edmitSpan" @click="defultAddress(items)">设为默认地址</span>
+									<span class="edmitSpan" @click="emitAddress(items,index)">编辑
+								</span>
+								<span v-if="!items.isShowDefult" @click="deleAddressAlert(index)" class="edmitSpan edmitSpan-delete">删除</span>
+							</span></el-col>
+							<div class="clearfix"></div>
+						</div>
+					</el-row>
+					</div>
+					<el-dialog title="新增收货地址" :visible.sync="newAddressShow" width="30%">
+						<el-form ref="form" :model="form" label-width="80px">
+							<el-form-item label="收货人">
+								<el-input v-model="form.name" placeholder="请输入内容"></el-input>
+							</el-form-item>
+							<el-form-item label="所在地区">
+								<el-input v-model="form.city" placeholder="请输入内容"></el-input>
+							</el-form-item>
+							<el-form-item label="详细地址">
+								<el-input v-model="form.minarea" placeholder="请输入内容"></el-input>
+							</el-form-item>
+							<el-form-item label="手机号码">
+								<el-input v-model="form.phone" placeholder="请输入内容"></el-input>
+							</el-form-item>
+							<el-form-item>
+								<el-checkbox-group v-model="form.isShowDefult">
+									<el-checkbox label="设为默认地址" name="type">设为默认地址</el-checkbox>
+								</el-checkbox-group>
+							</el-form-item>
+						</el-form>
+						<span slot="footer" class="dialog-footer">
+							<el-button @click="dialogVisible = false" type="danger">取 消</el-button>
+							<el-button type="primary" @click="saveNewAdress(edmitType)">保存</el-button>
+						</span>
+					</el-dialog>
+					<div v-if="!moreAddressData.length == 0" class="muchAddress">
+						<span @click="moreAddress">更多地址
+							<transition name="fade" mode="out-in">
+								<i key="up" v-if="isTranShow" class="fa fa-angle-double-down"></i>
+								<i key="down" v-else class="fa fa-angle-double-up"></i>
+							</transition>
+						</span>
+					</div>
+					<div v-if="moreAddressData.length == 0" class="noAddress">
+						<span>您还没有收货地址，请增加新的收货地址！</span>
+					</div>
+				</li>
+				<li>
+					<span class="addAddressCons">支付方式</span>
+					<div class="consignee">
+						<span class="consigneeList" v-for="(paymentDatas,index) in paymentdatas" :class="{'consigneeListClick':paymentIndex == index}" @click="paymentIndex=index">
+							<span v-text="paymentDatas.name"></span>
+							<div v-show="paymentIndex == index">
+								<div class="arrow-right"></div>
+								<i class="fa fa-check" aria-hidden="true"></i>
+							</div>
+						</span>
+					</div>
+				</li>
+				<li>
+					<span class="addAddressCons">送货清单</span>
+					<span class="addAddress"><a href="ShoppingCart.html">返回修改购物车</a></span>
+					<div class="row deliverymode">
+						<div class="col-lg-3 deliverymodeLeft deliverymodeLe">
+							<p>配送方式：</p>
+							<div v-for="(deliverymodeDatas,index) in deliverymodedatas">
+								<span class="consigneeList" @click="deliverymodeIndex=index" :class="{'consigneeListClick':deliverymodeIndex == index}">
+									<span v-text="deliverymodeDatas.type"></span>
+									<div v-show="deliverymodeIndex == index">
+										<div class="arrow-right"></div>
+										<i class="fa fa-check" aria-hidden="true"></i>
+									</div>
+								</span>
+								<p class="deliverymodeLeftTit" v-text="deliverymodeDatas.name"></p>
+							</div>
+						</div>
+						<div class="col-lg-9 deliverymodeRight">
+							<div class="layui-form">
+							  <table class="layui-table">
+								  <tr>
+									<td>
+										<span class="goodName">
+											<img class="goodImg" src="../img/img1/3658.jpg">
+										</span>
+										<span class="goodName goodsName">
+											<h2 class="goodname"></h2>
+											<p class="goodGary">
+												<span>供应商：</span>
+												<span>美国</span>
+											</p>
+											<p class="goodGary">
+												<span>发货地：</span>
+												<span>中国</span>
+											</p>
+										</span>
+									</td>
+									<td class="goodPrice">$109.00</td>
+									<td class="goodNum">1</td>
+								  </tr>
+								  <tr>
+									<td>
+										<span class="goodName">
+											<img class="goodImg" src="../img/img1/222.jpg">
+										</span>
+										<span class="goodName goodsName">
+											<h2 class="goodname"></h2>
+											<p class="goodGary">
+												<span>供应商：</span>
+												<span>美国</span>
+											</p>
+											<p class="goodGary">
+												<span>发货地：</span>
+												<span>中国</span>
+											</p>
+										</span>
+									</td>
+									<td class="goodPrice">$234.00</td>
+									<td class="goodNum">1</td>
+								  </tr>
+								  
+							  </table>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<span class="addAddressCons">发票信息</span>
+					<div class="consignee">
+						<span class="consigneeList" v-for="(invoiceDatas,index) in invoicedatas" :class="{'consigneeListClick':invoiceIndex == index}" @click="invoiceIndex=index">
+							<span v-text="invoiceDatas.name"></span>
+							<div v-show="invoiceIndex == index">
+								<div class="arrow-right"></div>
+								<i class="fa fa-check" aria-hidden="true"></i>
+							</div>
+						</span>
+					</div>
+					<div class="consignee" v-if="invoiceIndex > 0">
+						<span class="CompanyInformation">增值税普通发票</span>
+						<span class="CompanyInformation">北京科技公司</span>
+						<span class="CompanyInformation">货物详细</span>
+						<span class="CompanyInformation modify">修改</span>
+					</div>
+					
+				</li>
+				<!-- <li class="couponconts">
+					<span class="addAddressCons ">使用优惠券</span>
+					<div class="consignee couponcontShow" >
+						<span class="coupon" v-for="(CouponDatas,index) in Coupondatas" :class="{'consigneeListClick':CouponIndex == index}" @click="CouponIndexClcik(index,CouponDatas.price)">
+							<div class="couponDiv" :class="{'couponDivClick':CouponIndex == index}">
+								<p class="couponprice">{{CouponDatas.price | moneyFiler}}</p>
+								<p class="coupontime" v-text="'有效期至'+CouponDatas.time"></p>
+							</div>
+							<span class="coupontype" :class="{'coupontypeClick':CouponIndex == index}">
+								<span v-text="CouponDatas.type"></span>
+								<span v-text="CouponDatas.types"></span>
+							</span>
+							<div v-show="CouponIndex == index">
+								<div class="arrow-right"></div>
+								<i class="fa fa-check" aria-hidden="true"></i>
+							</div>
+						</span>
+					</div>
+				</li> -->
+			</ul>
+			<div class="row totalRow">金额抵用：{{couponPrice | moneyFiler}}</div>
+		</div>
+		<div class="contenterFooter">
+			<p>1件商品，1项服务，总金额：<span class="footerPrice">￥600.00</span></p>
+			<p>运费：<span class="footerPrice">￥10.00</span></p>
+			<p>优惠：<span class="footerPrice footercouponPrice">{{couponPrice | moneyFiler}}</span></p>
+		</div>
+		<div class="clearfix"></div>
+		<div class="row footerRow">
+				<span class="footerRowprice">应付金额：<span>￥600.00</span></span>  
+				<span class="footerRowaddress"><span>商品收获地址：{{moreaddressCity + moreaddressArea + moreaddressMinarea}}</span><span>{{moreaddressName}}</span><span>北京市海淀区</span></span>
+		</div>
+		<button class="btn submitForm">提交订单</button>
+	</div>
+	
+	
+</div>
+</div>
+
+
+<div class="footer">
+
+		<ul class="msg">
+			<li>
+				<ul class="msg1">
+					<li>
+						主页
+					</li>
+					<li>
+						关于COSME-DE.COM
+					</li>
+					<li>
+						联系COSME-DE.COM
+					</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="msg1">
+					<li>我的账户</li>
+					<li>我的账户</li>
+					<li>我的账户</li>
+					<li>我的账户</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="msg1">
+					<li>最新消息</li>
+
+				</ul>
+			</li>
+			<li>
+				<ul class="msg1">
+
+					<li>2018.03.27</li>
+					<li>2018.03.27</li>
+					<li>2018.03.27</li>
+					<li>2018.03.27</li>
+
+				</ul>
+			</li>
+			<li>
+				<ul class="msg1">
+					<li>复活节及清明节放假通知</li>
+					<li>复活节及清明节放假通知</li>
+					<li>复活节及清明节放假通知</li>
+					<li>复活节及清明节放假通知</li>
+
+				</ul>
+			</li>
+			<li>
+				<ul class="msg1">
+
+					<li>2018.03.27</li>
+					<li>2018.03.27</li>
+					<li>2018.03.27</li>
+					<li>2018.03.27</li>
+
+				</ul>
+			</li>
+		</ul>
+		<ul class="msg2">
+			<li>
+				<div>
+					订阅电子通讯 <span>率先知道会员优惠及信息 
+					</span>
+					<form>
+						<input type="text" name="" class="teet">
+						<input type="submit" name="" class="ssub">
+					</form>
+				</div>
+			</li>
+
+		</ul>
+		<ul class="msg3">
+			<li>
+				<img src="../img/img1/gg.jpg">
+				<img src="../img/img1/gg.jpg">
+
+				<img src="../img/img1/gg.jpg">
+
+				<img src="../img/img1/gg.jpg">
+				<img src="../img/img1/gg.jpg">
+
+				<img src="../img/img1/gg.jpg">
+
+
+			</li>
+			<li>Copyright &copy; 2007-2008 cosme De Net .Ltd</li>
+			<li>使用本网站则视为接受有关条跨</li>
+		</ul>
+	</div>
+
+
+	<div class="aside">
+		<div id="carousel-example-generic3" class="carousel slide" data-ride="carousel">
+
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<a href="">
+						<img src="../img/img1/m1.png" alt="...">
+					</a>
+
+				</div>
+				<div class="item">
+					<a href=""><img src="../img/img1/m2.png" alt="..."></a>
+
+				</div><div class="item">
+					<a href=""><img src="../img/img1/m3.png" alt="..."></a>
+
+
+				</div><div class="item">
+					<a href=""><img src="../img/img1/m4.png" alt="..."></a>
+
+
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+	<div class="center-block center1">
+		<button type="button" class="close close1" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<h3>会员登录</h3>
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">登入：</label>
+				<div class="col-sm-10">
+					<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputPassword3" class="col-sm-2 control-label">密码：</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> 记住账号
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">现在登录</button>
+				</div>
+			</div>
+			<div class="forms-forgs">
+				<a href="">忘记密码</a>
+				<a href="#">注册会员</a>
+			</div>
+
+		</form>
+	</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../plugins/vue/vue.js"></script>
+<script type="text/javascript" src="../plugins/eleme-ui/index.js"></script>
+<script type="text/javascript" src="../js/CivilMilitaryIntegration/ShoppingCart.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+</body>
+</html>

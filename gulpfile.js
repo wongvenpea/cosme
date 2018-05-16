@@ -107,7 +107,7 @@ gulp.task('default',['yasuoCss','yasuoHtml','yasuoJs'],function(){
 	gulp.watch('./src/css/*.css',['yasuoCss','jianting']);
 	gulp.watch('./src/html/*.html',['yasuoHtml','jianting']);
 	//自动监听sass转换
-	gulp.watch('./src/scss/*.scss',['sass']); 
+	gulp.watch('./src/scss/*.{scss,css}',['sass']); 
 	// gulp.watch('./src/img/*.{png,jpg,gif,ico}',['testImagemin']);
 
 	//开启服务器
