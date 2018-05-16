@@ -1,7 +1,7 @@
 
 // 最上面的广告关闭按钮
 
-$(".iconn").on('click',function(){
+$(".closes").on('click',function(){
 	$(".adv .advCon").css('display','none');
 })
 
@@ -29,3 +29,13 @@ $(".iconn").on('click',function(){
 // $(".search").on('blur',function(){
 // 	this.val('请输入关键字或商品编号');
 // })
+
+// 登录框
+
+$('.centerse').on('click',function(){
+	$('.center1').fadeTo('opacity','1')
+})
+
+$(".close1").on('click',function(){
+	$(".center1").fadeTo('opcity','0');
+})

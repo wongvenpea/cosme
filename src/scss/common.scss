@@ -163,7 +163,7 @@ img{
 	width:950px;
 	margin:0 auto;
 	padding:4px 22px;
-	background: linear-gradient(to bottom, #a9a9a9 8%,#fefefe 18%,#ffffff 60%,);
+	background: linear-gradient(to bottom, #a9a9a9 8%,#fefefe 95%,#ffffff 60%,);
 
 	.seaForm{
 		.txt{
@@ -280,6 +280,7 @@ img{
 		width: 33.33%;
 		float: left;
 		overflow: hidden;
+		padding:0 30px;
 		img{
 			float: left;
 		}
@@ -416,8 +417,9 @@ img{
 
 }
 
-.iconn{
-	display: block;
+// 最上面的广告
+.closes{
+	
 	width: 16px;
 	height: 16px;
 	color: #fff;
@@ -426,4 +428,40 @@ img{
 	top: 5px;
 	right: 20px;
 	line-height: 16px;
+}
+
+// 登录框
+
+.center1{
+	width: 800px;
+	height: 300px;
+	padding:20px;
+	border:1px solid #ccc;
+    background: linear-gradient(to bottom, #edecea 8%,#fefefe 65%,#ffffff 60%);
+    border-radius:15px;
+    box-shadow: 0 0 8px #edecea;
+    position: fixed;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+
+}
+.forms-forgs{
+	width: 300px;
+	float: right;
+	margin-right: 15px;
+	a{
+		padding:0 5px;
+	}
+}
+.centerse{
+	border:none;
+	background:rgba(255,255,255,0);
+	outline: none;
+}
+.close1{
+	position: absolute;
+	top: 5px;
+	right: 20px;
 }

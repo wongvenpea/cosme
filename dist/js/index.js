@@ -1,1 +1,1 @@
-$(".iconn").on("click",function(){$(".adv .advCon").css("display","none")});
+$(".closes").on("click",function(){$(".adv .advCon").css("display","none")}),$(".centerse").on("click",function(){$(".center1").fadeTo("opacity","1")}),$(".close1").on("click",function(){$(".center1").fadeTo("opcity","0")});

@@ -1,0 +1,104 @@
+.bigBox{
+	width: 950px;
+	margin:0 auto;
+	padding:0 20px;
+	overflow: hidden;
+	background:#fff;
+	.listLeft{
+		width: 20%;
+		float: left;
+
+	}
+
+}
+
+// 左侧列表
+.listDl{
+	h3{
+		font-size: 20px;
+		color: #ac9f8c;
+		line-height: 40px;
+	}
+	dd{
+		font-size: 14px;
+		color: #ac9f8c;
+		line-height: 28px;
+	}
+	dt{
+		font-size: 12px;
+		color: #666;
+		line-height: 28px;
+		font-weight: 100;
+	}
+}
+.contentRight{
+	width:80%;
+	float: left;
+	overflow: hidden;
+	padding:5px ;
+	border:1px solid #ccc;
+	box-shadow: 0 0 8px #ccc;
+}
+.formConRight{
+	padding:0 50px;
+	h3{
+		padding:10px 0;
+	}
+	.p1{
+		padding:5px 0;
+	}
+	.forg1{
+		margin:10px 33px;
+		display: inline-block;
+		width: 17%;
+	}
+	.forg2{
+		margin:10px 0;
+		display: inline-block;
+		width: 55%;
+	}
+	.forg3{
+		margin:10px 18px 10px 10px;
+		display: inline-block;
+		width: 78%;
+		float: right;
+		vertical-align: middle;
+	}
+}
+.clause{
+	width:80%;
+	height: 600px;
+	overflow: auto;
+	margin:0 auto;
+	border:1px solid #ccc;
+	padding:10px;
+	border-radius: 10px;
+}
+.clase1{
+	width:150px;
+	display: inline-block;
+}
+.form-control1{
+	width: 390px;
+	display: inline-block;
+}
+.form-control2{
+	width: 450px;
+	display: inline-block;
+	float: right;
+	margin-right:18px;
+}
+#v_container{
+	width:100px;
+	height: 50px;
+	margin:20px 110px;
+	border-bottom: 1px dashed #ccc;
+
+}
+#code_input{
+	margin-bottom: 20px;
+}
+.btnde{
+	margin:-12px 30px 68px 132px;
+
+}

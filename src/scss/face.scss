@@ -1,38 +1,53 @@
-
-// alb
-// .alb{
-// 	width: 142px;
-// 	height: 75px;
-
-// 	.imgss img{
-// 		width: 142px;
-// 		height: 75px;
-// 	}
-// 	.carousel-control{background-image:none!important;}
-// }
-
-// imglist
-.imgList{
-	color: red;
+.bigBox{
 	width: 950px;
 	margin:0 auto;
-	overflow: hidden;
-	font-size: 0;
 	padding:0 20px;
-	background:#fefefe;
-	img{
+	overflow: hidden;
+	background:#fff;
+	.listLeft{
+		width: 20%;
 		float: left;
+
 	}
+
 }
 
+// 左侧列表
+.listDl{
+	h3{
+		font-size: 20px;
+		color: #ac9f8c;
+		line-height: 40px;
+	}
+	dd{
+		font-size: 14px;
+		color: #ac9f8c;
+		line-height: 28px;
+	}
+	dt{
+		font-size: 12px;
+		color: #666;
+		line-height: 28px;
+		font-weight: 100;
+	}
+}
+.contentRight{
+	width:720px;
+	float: left;
+	overflow: hidden;
+	padding:5px;
+	border:1px solid #ccc;
+	box-shadow: 0 0 8px #ccc;
+}
+
+// 中间的箭头格子
 // navList
 .navList{
-	width:950px;
+	width:720px;
 	margin:0 auto ;
-	padding:0 20px;
 	background:#fefefe;
 	.navUl{
-		width: 909px;
+		
 		overflow: hidden;
 		background:#93846f;
 	}
@@ -77,24 +92,15 @@
 	}
 }
 
-// content:
-.content{
-	width: 950px;
-	margin:0 auto;
-	padding:0 20px 30px;
-	
-	background:#fff;
-	.cont{
-		overflow: hidden;
-		border: 1px solid #ddd;
-		box-shadow: 0 0 5px #ccc;
-		position: relative;
-		padding:0 0 35px;
-		border-radius: 0 0 15px 15px;
-	}
-	.contCon{
+// contCons
+.contCons{
+	width: 100%;
+	overflow: hidden;
+
+.contCon{
+	width: 25%;
 		float: left;
-		padding:20px 5px;
+		padding:0 8px;
 		img{
 		display: block;
 		}
@@ -129,27 +135,4 @@
 	line-height: 20px;
 	}
 	}
-	.more{
-		padding:0 10px;
-		
-		position: absolute;
-		right: 20px;
-		bottom: 15px;
-		a{
-			color: #777;
-		font-size: 12px;
-		cursor: pointer;
-		}
-
-
-	}
-}
-
-// buy
-
-.buy{
-	width: 950px;
-	margin:0 auto;
-	padding:0 20px;
-	background:#fff;
 }
