@@ -39,3 +39,17 @@ $('.centerse').on('click',function(){
 $(".close1").on('click',function(){
 	$(".center1").fadeTo('opcity','0');
 })
+
+//吸顶效果
+$(window).ready(function(){
+	
+$(window).scroll(function (){
+	var top =$(this).scrollTop();
+	if(top >= 200 ){
+		console.log(111);
+	$('.adr').addClass('showadr');
+	}else{
+		$('.adr').removeClass('showadr');
+	}
+})
+})

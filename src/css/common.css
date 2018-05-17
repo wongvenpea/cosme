@@ -329,7 +329,7 @@ img {
   line-height: 16px; }
 
 .center1 {
-  width: 800px;
+  width: 600px;
   height: 300px;
   padding: 20px;
   border: 1px solid #ccc;
@@ -358,3 +358,9 @@ img {
   position: absolute;
   top: 5px;
   right: 20px; }
+
+.showadr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999; }

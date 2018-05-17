@@ -96,11 +96,11 @@
 .contCons{
 	width: 100%;
 	overflow: hidden;
-
+}
 .contCon{
 	width: 25%;
 		float: left;
-		padding:0 8px;
+		padding:0 7px;
 		img{
 		display: block;
 		}
@@ -134,5 +134,19 @@
 	color: #dd7fa2;
 	line-height: 20px;
 	}
+	
+}
+.contCons .contCon .conimgg{
+	width: 165px;
+	height: 165px;
+	overflow: hidden;
+	img{
+		width: 165px ;
+		height: 165px;
+
 	}
+}
+.contCon :hover .conimgg img{
+	transition:0.2 all;
+	transform: scale( 1.1); 
 }

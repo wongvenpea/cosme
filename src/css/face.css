@@ -76,33 +76,46 @@
 .contCons {
   width: 100%;
   overflow: hidden; }
-  .contCons .contCon {
-    width: 25%;
-    float: left;
-    padding: 0 8px; }
-    .contCons .contCon img {
-      display: block; }
-    .contCons .contCon a {
-      display: block;
-      border-bottom: 1px solid #ccc;
-      padding: 0 0 15px; }
-    .contCons .contCon div {
-      width: 100%;
-      height: 18px; }
-    .contCons .contCon h3 {
-      font-size: 12px;
-      color: #000;
-      line-height: 20px; }
-    .contCons .contCon .cp1 {
-      margin-top: 10px;
-      font-size: 12px;
-      color: #000;
-      line-height: 20px; }
-    .contCons .contCon .cp3 {
-      font-size: 12px;
-      color: #911d34;
-      line-height: 20px; }
-    .contCons .contCon .cp3 {
-      font-size: 12px;
-      color: #dd7fa2;
-      line-height: 20px; }
+
+.contCon {
+  width: 25%;
+  float: left;
+  padding: 0 7px; }
+  .contCon img {
+    display: block; }
+  .contCon a {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 15px; }
+  .contCon div {
+    width: 100%;
+    height: 18px; }
+  .contCon h3 {
+    font-size: 12px;
+    color: #000;
+    line-height: 20px; }
+  .contCon .cp1 {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #000;
+    line-height: 20px; }
+  .contCon .cp3 {
+    font-size: 12px;
+    color: #911d34;
+    line-height: 20px; }
+  .contCon .cp3 {
+    font-size: 12px;
+    color: #dd7fa2;
+    line-height: 20px; }
+
+.contCons .contCon .conimgg {
+  width: 165px;
+  height: 165px;
+  overflow: hidden; }
+  .contCons .contCon .conimgg img {
+    width: 165px;
+    height: 165px; }
+
+.contCon :hover .conimgg img {
+  transition: 0.2 all;
+  transform: scale(1.1); }
